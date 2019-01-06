@@ -51,3 +51,35 @@ FOREIGN KEY ("category_id")
   ↳ bin/rails:9
   [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-01-06 16:08:11 +0000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (16.9ms)
+Completed 200 OK in 80ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-01-06 16:08:25 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [22 times] (72.7ms)
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (69.8ms)
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (181.1ms)
+Completed 200 OK in 211ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//pages/home" for 127.0.0.1 at 2019-01-06 16:08:46 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5729ms (Views: 5720.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/home" for 127.0.0.1 at 2019-01-06 16:08:53 +0000
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 154ms (Views: 148.7ms | ActiveRecord: 0.0ms)
+
+
