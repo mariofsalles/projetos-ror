@@ -117,3 +117,104 @@ Migrating to CreateKinds (20190107075424)
   ↳ bin/rails:9
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-01-07 13:24:40 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (13.3ms)
+Completed 200 OK in 55ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2019-01-07 13:24:50 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (36.2ms)
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/actionpack-5.2.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (56.8ms)
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 135ms (Views: 127.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=con" for 127.0.0.1 at 2019-01-07 13:24:56 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"con"}
+Completed 200 OK in 10ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=conta" for 127.0.0.1 at 2019-01-07 13:24:57 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"conta"}
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=contact" for 127.0.0.1 at 2019-01-07 13:24:59 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"contact"}
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=contact" for 127.0.0.1 at 2019-01-07 13:25:00 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"contact"}
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contact/index" for 127.0.0.1 at 2019-01-07 13:26:13 +0000
+  
+ActionController::RoutingError (undefined local variable or method `set_contact' for ContactController:Class
+Did you mean?  set_trace_func):
+  
+app/controllers/contact_controller.rb:2:in `<class:ContactController>'
+app/controllers/contact_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-01-07 13:26:22 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/hpdm1/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (14.2ms)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info/routes" for 127.0.0.1 at 2019-01-07 13:26:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/info/routes"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/contact/index" for 127.0.0.1 at 2019-01-07 13:26:56 +0000
+  
+ActionController::RoutingError (undefined local variable or method `set_contact' for ContactController:Class
+Did you mean?  set_trace_func):
+  
+app/controllers/contact_controller.rb:2:in `<class:ContactController>'
+app/controllers/contact_controller.rb:1:in `<main>'
+Started GET "/contact/new" for 127.0.0.1 at 2019-01-07 13:27:43 +0000
+  
+ActionController::RoutingError (undefined local variable or method `set_contact' for ContactController:Class
+Did you mean?  set_trace_func):
+  
+app/controllers/contact_controller.rb:2:in `<class:ContactController>'
+app/controllers/contact_controller.rb:1:in `<main>'
