@@ -51,3 +51,48 @@ FOREIGN KEY ("contact_id")
   ↳ bin/rails:9
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAddresses (20190107072606)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190107072606_create_addresses.rb:3
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar, "number" varchar, "neighborhood" varchar, "contact_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_67e9674de3"
+FOREIGN KEY ("contact_id")
+  REFERENCES "contacts" ("id")
+)[0m
+  ↳ db/migrate/20190107072606_create_addresses.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_addresses_on_contact_id" ON "addresses" ("contact_id")[0m
+  ↳ db/migrate/20190107072606_create_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190107072606"]]
+  ↳ bin/rails:9
+  [1m[35m (145.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateContactKinds (20190107073942)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "contact_kinds" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "contact_id" integer, "kind_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f0f8c63c6d"
+FOREIGN KEY ("contact_id")
+  REFERENCES "contacts" ("id")
+, CONSTRAINT "fk_rails_dbfc07c927"
+FOREIGN KEY ("kind_id")
+  REFERENCES "kinds" ("id")
+)[0m
+  ↳ db/migrate/20190107073942_create_contact_kinds.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_contact_kinds_on_contact_id" ON "contact_kinds" ("contact_id")[0m
+  ↳ db/migrate/20190107073942_create_contact_kinds.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_contact_kinds_on_kind_id" ON "contact_kinds" ("kind_id")[0m
+  ↳ db/migrate/20190107073942_create_contact_kinds.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190107073942"]]
+  ↳ bin/rails:9
+  [1m[35m (121.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

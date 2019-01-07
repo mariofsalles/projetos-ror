@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_07_072245) do
+ActiveRecord::Schema.define(version: 2019_01_07_073942) do
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "street"
+    t.string "number"
+    t.string "neighborhood"
+    t.integer "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_addresses_on_contact_id"
+  end
+
+  create_table "contact_kinds", force: :cascade do |t|
+    t.integer "contact_id"
+    t.integer "kind_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_contact_kinds_on_contact_id"
+    t.index ["kind_id"], name: "index_contact_kinds_on_kind_id"
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string "name"
