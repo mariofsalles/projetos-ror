@@ -19,13 +19,14 @@ class ContactController < ApplicationController
 
   def new
     @contact = Contact.new
+    @contact.build_address
   end
 
   def edit
   end
 
   def update
-    if @contact.update
+    if @contact.update(contact_params)
       redirect_to contacts_path
     else
       render :new, notice: "Não foi possivel criar um novo contato."
@@ -43,7 +44,9 @@ class ContactController < ApplicationController
   end
 
   def contact_params
-    params.require(:contact).permit(:name)
+    params.require(:contact).permit(:name,
+      address_attributes: [:street, :number, :neighborhood],
+      phones_attributes: [:number]
+    )
   end
-  
 end

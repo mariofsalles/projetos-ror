@@ -1,0 +1,28 @@
+<%= form_for @contact do |f| >
+  <div class = "field">
+    <%= f.label :name >
+    <%= f.text_field :name >
+  </div>
+
+  <%= f.fields_for :address do |address| >
+
+    <div class = "field">
+      <%= address.label :street > 
+      <%= address.text_field :street >
+    </div>
+
+    <div class = "field">
+      <%= address.label :number > 
+      <%= address.text_field :number >
+    </div>
+    
+    <div class = "field">
+      <%= address.label :neighborhood > 
+      <%= address.text_field :neighborhood >
+    </div>
+
+  <% end >
+  <div class = "field">
+    <%= f.submit >
+  </div>
+<% end >
